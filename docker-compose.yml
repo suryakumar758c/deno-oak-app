@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  deno-test-app:
+    image: "deno-test/deno-test-app"
+    container_name: "deno-test-app"
+    ports: 
+      - 49160:3000
+    restart: always
