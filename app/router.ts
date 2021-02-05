@@ -20,6 +20,7 @@ router.use(authorize);
 
 // feed section
 router.get("/feed", Feed.getFeed);
+router.post("/post-feed", Feed.postFeed);
 
 //file upload
 router.post(

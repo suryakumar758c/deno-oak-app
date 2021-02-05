@@ -33,14 +33,25 @@ class Feed {
   }: getFeedRouterContext): Promise<void> {
     let result: ApiResponseType = ApiResponse;
     try {
-      const requestBody: FeedPostType | any = request.body().value || {};
+      const requestBody: FeedPostType | any =
+        (await request.body().value) || {};
+      console.log("userId", userId);
       const feed: Values = {
-        userId,
+        user_id: userId,
         content: requestBody.content || "",
       };
-      Feeds.create;
+      const post: Model = await Feeds.create(feed);
+
+      if (!post.lastInsertId) {
+        result.code = 400;
+        throw new Error("Unable to create post. something went wrong!");
+      }
+
+      result.code = 200;
+      result.message = "success";
+      result.data = post.lastInsertId;
     } catch (e) {
-      console.trace(chalk.red("login error"), chalk.red(e));
+      // console.trace(chalk.red("login error"), chalk.red(e));
       console.error(e);
       result.message = e.message;
     } finally {

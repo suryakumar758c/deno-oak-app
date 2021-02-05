@@ -37,7 +37,7 @@ export default async (context: any, next: any): Promise<void> => {
 
     await next();
   } catch (error) {
-    console.trace(chalk.red("authorization error:"), chalk.red(error.message));
+    // console.trace(chalk.red("authorization error:"), error.message);
     console.error(error);
     result.code = result.code === 200 ? 400 : result.code;
     result.message = error.message;
