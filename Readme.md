@@ -1,6 +1,8 @@
 Installation:
+------------
 
 Ubuntu:
+------
 
 1. curl -fsSL https://deno.land/x/install/install.sh | sh
 
@@ -10,10 +12,12 @@ export DENO_INSTALL="/home/dektop-sn-04/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
 Windows (PowerShell):
+--------------------
 
 iwr https://deno.land/x/install/install.ps1 -useb | iex
 
 Execute:
+-------
 
 deno run --allow-net --allow-read server/main.ts
 
