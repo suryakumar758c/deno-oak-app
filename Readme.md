@@ -11,7 +11,7 @@ export PATH="$DENO_INSTALL/bin:$PATH"
 
 Windows (PowerShell):
 
-## iwr https://deno.land/x/install/install.ps1 -useb | iex
+iwr https://deno.land/x/install/install.ps1 -useb | iex
 
 Execute:
 
