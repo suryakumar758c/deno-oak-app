@@ -23,8 +23,6 @@ denon run --allow-net --allow-env --allow-write --allow-read --allow-plugin --un
 
 denon run --allow-net --allow-env --allow-write --allow-read --allow-plugin --unstable --inspect=<127.0.0.1:3000> main.ts
 
-==================================================================================================================
-
 ## Packages used:
 
 - Oak - deno http framework - https://deno.land/x/oak
