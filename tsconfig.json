@@ -1,4 +1,5 @@
 {
     "target":"es2018",
-    "module":"esnext"
+    "module":"esnext",
+    "experimentalDecorators":true
 }
